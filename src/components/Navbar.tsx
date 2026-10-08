@@ -20,7 +20,13 @@ export const Navbar = () => {
     };
   }, [isOpen]);
 
-  const navLinks = ['Features', 'How It Works', 'For Sales Reps', 'For Companies', 'FAQ'];
+  const navLinks = [
+    { label: 'Features', href: '#features' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'For Sales Reps', href: '#for-sales-reps' },
+    { label: 'For Companies', href: '#for-companies' },
+    { label: 'FAQ', href: '#faq' }
+  ];
 
   return (
     <>
@@ -29,7 +35,7 @@ export const Navbar = () => {
           <div className="flex h-[84px] items-center justify-between">
             
             {/* Logo */}
-            <div className="flex items-center gap-3 cursor-pointer z-50 relative">
+            <div className="flex items-center gap-3 cursor-pointer z-50 relative" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Image 
                 src="/logo.png" 
                 alt="Colone Connection Logo" 
@@ -45,8 +51,8 @@ export const Navbar = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-5 xl:gap-8 flex-1 justify-center px-4">
               {navLinks.map((item) => (
-                <Link key={item} href="#" className="text-[14px] xl:text-[15px] font-semibold text-gray-600 hover:text-brand-black transition-all whitespace-nowrap">
-                  {item}
+                <Link key={item.label} href={item.href} className="text-[14px] xl:text-[15px] font-semibold text-gray-600 hover:text-brand-black transition-all whitespace-nowrap">
+                  {item.label}
                 </Link>
               ))}
             </nav>
@@ -98,16 +104,16 @@ export const Navbar = () => {
           <nav className="flex flex-col space-y-6 flex-grow pt-4">
             {navLinks.map((item, i) => (
               <div 
-                key={item} 
+                key={item.label} 
                 className={`transform transition-all duration-500 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
                 style={{ transitionDelay: `${i * 75 + 100}ms` }}
               >
                 <Link 
-                  href="#" 
+                  href={item.href} 
                   className="block text-[26px] font-extrabold text-brand-black tracking-tight hover:text-brand-green transition-colors border-b border-gray-100/50 pb-5"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </Link>
               </div>
             ))}

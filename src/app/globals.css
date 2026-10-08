@@ -38,3 +38,4 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+html { scroll-behavior: smooth; }

@@ -17,14 +17,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <div id="features" className="scroll-mt-28"><Features /></div>
         <Comparison />
         <CoreFeatures />
         <SalesApp />
-        <HowItWorks />
-        <SalesTeam />
-        <ConnectedPlatform />
-        <FAQ />
+        <div id="how-it-works" className="scroll-mt-28"><HowItWorks /></div>
+        <div id="for-sales-reps" className="scroll-mt-28"><SalesTeam /></div>
+        <div id="for-companies" className="scroll-mt-28"><ConnectedPlatform /></div>
+        <div id="faq" className="scroll-mt-28"><FAQ /></div>
         <CTA />
       </main>
       <Footer />

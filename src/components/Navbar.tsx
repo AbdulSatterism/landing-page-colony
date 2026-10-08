@@ -43,22 +43,22 @@ export const Navbar = () => {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center space-x-10">
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-8 flex-1 justify-center px-4">
               {navLinks.map((item) => (
-                <Link key={item} href="#" className="text-[15px] font-bold text-gray-500 hover:text-brand-black transition-colors">
+                <Link key={item} href="#" className="text-[14px] xl:text-[15px] font-semibold text-gray-600 hover:text-brand-black transition-all whitespace-nowrap">
                   {item}
                 </Link>
               ))}
             </nav>
 
             {/* Desktop Buttons */}
-            <div className="hidden xl:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0">
               <a href="https://dashboard.colonyconnectionapp.com/" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="rounded-[14px] border-gray-200 text-brand-black font-bold px-6 py-2.5 hover:bg-gray-50 shadow-sm">
+                <Button variant="outline" className="rounded-full border-gray-200 bg-white/50 text-gray-700 font-semibold px-5 xl:px-6 py-2.5 hover:bg-gray-100 hover:text-brand-black hover:border-gray-300 transition-all shadow-sm whitespace-nowrap text-[14px] xl:text-[15px]">
                   Company Dashboard
                 </Button>
               </a>
-              <Button className="rounded-[14px] px-6 py-2.5 shadow-[0_4px_14px_rgba(23,184,95,0.25)] hover:shadow-[0_6px_20px_rgba(23,184,95,0.3)] transition-shadow" icon={
+              <Button className="rounded-full px-5 xl:px-6 py-2.5 bg-[#17b85f] hover:bg-[#139c50] text-white shadow-[0_4px_14px_rgba(23,184,95,0.25)] hover:shadow-[0_6px_20px_rgba(23,184,95,0.35)] transition-all font-semibold whitespace-nowrap text-[14px] xl:text-[15px]" icon={
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               }>
                 Download App
@@ -67,7 +67,7 @@ export const Navbar = () => {
 
             {/* Mobile Menu Toggle Button */}
             <button 
-              className="xl:hidden relative z-50 p-2.5 -mr-2 rounded-full hover:bg-gray-50 transition-colors focus:outline-none"
+              className="lg:hidden relative z-50 p-2.5 -mr-2 rounded-full hover:bg-gray-50 transition-colors focus:outline-none shrink-0"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -90,7 +90,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-all duration-500 ease-in-out xl:hidden ${
+        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-all duration-500 ease-in-out lg:hidden ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
         }`}
       >

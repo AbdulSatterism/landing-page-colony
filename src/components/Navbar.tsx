@@ -43,7 +43,7 @@ export const Navbar = () => {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-10">
+            <nav className="hidden xl:flex items-center space-x-10">
               {navLinks.map((item) => (
                 <Link key={item} href="#" className="text-[15px] font-bold text-gray-500 hover:text-brand-black transition-colors">
                   {item}
@@ -52,10 +52,12 @@ export const Navbar = () => {
             </nav>
 
             {/* Desktop Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Button variant="outline" className="rounded-[14px] border-gray-200 text-brand-black font-bold px-6 py-2.5 hover:bg-gray-50 shadow-sm">
-                Company Dashboard
-              </Button>
+            <div className="hidden xl:flex items-center space-x-4">
+              <a href="https://dashboard.colonyconnectionapp.com/" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="rounded-[14px] border-gray-200 text-brand-black font-bold px-6 py-2.5 hover:bg-gray-50 shadow-sm">
+                  Company Dashboard
+                </Button>
+              </a>
               <Button className="rounded-[14px] px-6 py-2.5 shadow-[0_4px_14px_rgba(23,184,95,0.25)] hover:shadow-[0_6px_20px_rgba(23,184,95,0.3)] transition-shadow" icon={
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               }>
@@ -65,7 +67,7 @@ export const Navbar = () => {
 
             {/* Mobile Menu Toggle Button */}
             <button 
-              className="lg:hidden relative z-50 p-2.5 -mr-2 rounded-full hover:bg-gray-50 transition-colors focus:outline-none"
+              className="xl:hidden relative z-50 p-2.5 -mr-2 rounded-full hover:bg-gray-50 transition-colors focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -88,7 +90,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-all duration-500 ease-in-out lg:hidden ${
+        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform transition-all duration-500 ease-in-out xl:hidden ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
         }`}
       >
@@ -115,9 +117,11 @@ export const Navbar = () => {
             className={`flex flex-col space-y-4 mt-10 transform transition-all duration-500 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
             style={{ transitionDelay: '500ms' }}
           >
-            <Button variant="outline" className="w-full rounded-[16px] py-5 text-[17px] font-bold border-2 border-gray-200 hover:bg-gray-50">
-              Company Dashboard
-            </Button>
+            <a href="https://dashboard.colonyconnectionapp.com/" target="_blank" rel="noopener noreferrer" className="block w-full" onClick={() => setIsOpen(false)}>
+              <Button variant="outline" className="w-full rounded-[16px] py-5 text-[17px] font-bold border-2 border-gray-200 hover:bg-gray-50">
+                Company Dashboard
+              </Button>
+            </a>
             <Button className="w-full rounded-[16px] py-5 text-[17px] font-bold shadow-[0_4px_20px_rgba(23,184,95,0.3)]" icon={
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
             }>

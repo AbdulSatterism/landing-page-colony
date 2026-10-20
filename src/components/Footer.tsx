@@ -10,14 +10,16 @@ export const Footer = () => {
           
           {/* Left Column - Logo & Tagline */}
           <div className="lg:w-[26%] lg:pr-12 lg:border-r lg:border-white/10 flex flex-col items-start shrink-0">
-            <Image 
-              src="/footer-logo.png" 
-              alt="Dar Dar Logo" 
-              width={76} 
-              height={76} 
-              className="mb-6 rounded-[18px] object-contain"
-              quality={100}
-            />
+            <Link href="/" className="inline-block transition-transform hover:scale-105">
+              <Image 
+                src="/footer-logo.png" 
+                alt="Dar Dar Logo" 
+                width={76} 
+                height={76} 
+                className="mb-6 rounded-[18px] object-contain"
+                quality={100}
+              />
+            </Link>
             <p className="text-[14px] text-gray-300 leading-[1.6] max-w-[280px]">
               Smarter <span className="text-[#17B85F]">Routes.</span> Stronger Customer Relationships.
             </p>
@@ -33,9 +35,9 @@ export const Footer = () => {
               <div>
                 <h4 className="text-[14px] font-bold text-white mb-5">Company</h4>
                 <ul className="space-y-4 text-[13px] text-gray-400 font-medium">
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">About Dar Dar</Link></li>
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">How It Works</Link></li>
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">Contact Us</Link></li>
+                  <li><Link href="/#how-it-works" className="hover:text-brand-green transition-colors">About Dar Dar</Link></li>
+                  <li><Link href="/#how-it-works" className="hover:text-brand-green transition-colors">How It Works</Link></li>
+                  <li><Link href="/#faq" className="hover:text-brand-green transition-colors">Contact Us</Link></li>
                 </ul>
               </div>
               
@@ -43,7 +45,7 @@ export const Footer = () => {
               <div>
                 <h4 className="text-[14px] font-bold text-white mb-5">For Representative</h4>
                 <ul className="space-y-4 text-[13px] text-gray-400 font-medium">
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">Become a Sales Representative</Link></li>
+                  <li><Link href="/#for-sales-reps" className="hover:text-brand-green transition-colors">Become a Sales Representative</Link></li>
                   <li><Link href="#" className="hover:text-brand-green transition-colors">Download App</Link></li>
                 </ul>
               </div>
@@ -52,7 +54,7 @@ export const Footer = () => {
               <div>
                 <h4 className="text-[14px] font-bold text-white mb-5">For Company</h4>
                 <ul className="space-y-4 text-[13px] text-gray-400 font-medium">
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">Become a Company</Link></li>
+                  <li><Link href="/#for-companies" className="hover:text-brand-green transition-colors">Become a Company</Link></li>
                 </ul>
               </div>
 
@@ -60,7 +62,7 @@ export const Footer = () => {
               <div>
                 <h4 className="text-[14px] font-bold text-white mb-5">Legal</h4>
                 <ul className="space-y-4 text-[13px] text-gray-400 font-medium">
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">Privacy Policy</Link></li>
+                  <li><Link href="/privacy-policy" className="hover:text-brand-green transition-colors">Privacy Policy</Link></li>
                   <li><Link href="#" className="hover:text-brand-green transition-colors">Terms & Conditions</Link></li>
                 </ul>
               </div>

@@ -21,11 +21,11 @@ export const Navbar = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'For Sales Reps', href: '#for-sales-reps' },
-    { label: 'For Companies', href: '#for-companies' },
-    { label: 'FAQ', href: '#faq' }
+    { label: 'Features', href: '/#features' },
+    { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'For Sales Reps', href: '/#for-sales-reps' },
+    { label: 'For Companies', href: '/#for-companies' },
+    { label: 'FAQ', href: '/#faq' }
   ];
 
   return (
@@ -35,7 +35,7 @@ export const Navbar = () => {
           <div className="flex h-[84px] items-center justify-between">
             
             {/* Logo */}
-            <div className="flex items-center gap-3 cursor-pointer z-50 relative" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <Link href="/" className="flex items-center gap-3 cursor-pointer z-50 relative">
               <Image 
                 src="/logo.png" 
                 alt="Colone Connection Logo" 
@@ -46,7 +46,7 @@ export const Navbar = () => {
               <span className="text-[20px] sm:text-[22px] font-extrabold text-brand-black tracking-tight">
                 Colone Connection
               </span>
-            </div>
+            </Link>
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-5 xl:gap-8 flex-1 justify-center px-4">

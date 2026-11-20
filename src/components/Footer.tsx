@@ -46,7 +46,16 @@ export const Footer = () => {
                 <h4 className="text-[14px] font-bold text-white mb-5">For Representative</h4>
                 <ul className="space-y-4 text-[13px] text-gray-400 font-medium">
                   <li><Link href="/#for-sales-reps" className="hover:text-brand-green transition-colors">Become a Sales Representative</Link></li>
-                  <li><Link href="#" className="hover:text-brand-green transition-colors">Download App</Link></li>
+                  <li>
+                    <a 
+                      href="https://apps.apple.com/us/app/colony-connection/id6778360414" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-brand-green transition-colors"
+                    >
+                      Download App
+                    </a>
+                  </li>
                 </ul>
               </div>
 

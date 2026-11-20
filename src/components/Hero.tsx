@@ -30,9 +30,16 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3.5 w-full sm:w-auto px-4 sm:px-0 mb-10 lg:mb-12">
-              <Button size="lg" className="rounded-[16px] text-[16px] px-8 py-5 sm:py-7 shadow-[0_8px_20px_rgba(23,184,95,0.25)] hover:shadow-[0_10px_25px_rgba(23,184,95,0.35)] w-full sm:w-auto transition-shadow">
-                Download the App <span className="ml-2 font-bold">→</span>
-              </Button>
+              <a 
+                href="https://apps.apple.com/us/app/colony-connection/id6778360414" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button size="lg" className="rounded-[16px] text-[16px] px-8 py-5 sm:py-7 shadow-[0_8px_20px_rgba(23,184,95,0.25)] hover:shadow-[0_10px_25px_rgba(23,184,95,0.35)] w-full transition-shadow">
+                  Download the App <span className="ml-2 font-bold">→</span>
+                </Button>
+              </a>
               <Button size="lg" variant="outline" className="rounded-[16px] text-[16px] px-8 py-5 sm:py-7 border-2 border-gray-200 bg-white hover:bg-gray-50 w-full sm:w-auto">
                 Become a Company
               </Button>

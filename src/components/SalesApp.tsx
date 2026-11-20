@@ -49,10 +49,17 @@ export const SalesApp = () => {
             </div>
             
             <div className="flex flex-col items-center lg:items-start mt-2 sm:mt-4">
-              <Button size="lg" className="w-full sm:w-auto rounded-[16px] px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] shadow-[0_8px_20px_rgba(23,184,95,0.2)] mb-3 transition-shadow hover:shadow-[0_10px_25px_rgba(23,184,95,0.3)]">
-                Download the Mobile App
-                <svg className="ml-2.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              </Button>
+              <a 
+                href="https://apps.apple.com/us/app/colony-connection/id6778360414" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button size="lg" className="w-full rounded-[16px] px-8 py-5 sm:py-6 text-[15px] sm:text-[16px] shadow-[0_8px_20px_rgba(23,184,95,0.2)] mb-3 transition-shadow hover:shadow-[0_10px_25px_rgba(23,184,95,0.3)]">
+                  Download the Mobile App
+                  <svg className="ml-2.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </Button>
+              </a>
               <p className="text-[12px] text-gray-500 font-medium">
                 Available on the App Store & Google Play 
               </p>

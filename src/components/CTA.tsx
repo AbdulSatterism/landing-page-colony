@@ -29,13 +29,18 @@ export const CTA = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               
               {/* Apple App Store Button */}
-              <button className="flex items-center gap-3.5 bg-white px-7 py-3.5 rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto justify-center group">
+              <a 
+                href="https://apps.apple.com/us/app/colony-connection/id6778360414" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3.5 bg-white px-7 py-3.5 rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto justify-center group"
+              >
                 <Image src="/app-store.png" alt="App Store" width={30} height={30} className="object-contain" quality={100} />
                 <div className="text-left">
                   <div className="text-[11px] text-gray-500 font-bold leading-[1.1]">Download on the</div>
                   <div className="text-[18px] font-extrabold text-brand-black leading-[1.1] tracking-tight">App Store</div>
                 </div>
-              </button>
+              </a>
 
               {/* Google Play Button */}
               <button className="flex items-center gap-3.5 bg-white px-7 py-3.5 rounded-[14px] shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto justify-center">
